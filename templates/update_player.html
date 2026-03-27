@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Player</title>
+</head>
+<body>
+
+<h2>Update Volleyball Player</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Player</button>
+</form>
+
+<br>
+<a href="/">Back to Player List</a>
+
+</body>
+</html>

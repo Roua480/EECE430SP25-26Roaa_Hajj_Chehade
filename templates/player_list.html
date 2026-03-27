@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Volleyball Players</title>
+</head>
+<body>
+
+<h2>Volleyball Player List</h2>
+
+<a href="/add/">➕ Add New Player</a>
+
+<hr>
+
+{% for player in players %}
+    <p>
+        ID: {{ player.id }} |
+        Name: {{ player.name }} |
+        Date Joined: {{ player.dateJoined }} |
+        Position: {{ player.position }} |
+        Salary: {{ player.salary }} |
+        Contact: {{ player.contactPerson }}
+
+        <br>
+        <a href="/update/{{ player.id }}/">✏ Update</a> |
+        <a href="/delete/{{ player.id }}/">❌ Delete</a>
+    </p>
+{% empty %}
+    <p>No players found.</p>
+{% endfor %}
+
+</body>
+</html>
