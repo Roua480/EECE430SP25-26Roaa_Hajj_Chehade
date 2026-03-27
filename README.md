@@ -61,3 +61,25 @@ Pull and run the pre-built image:
 ```bash
 docker pull roua780/player_list:latest
 docker run -p 8000:8000 roua780/player_list:latest
+Open in browser:
+http://localhost:8000
+
+🔹 Option 2: Build and Run Locally
+docker build -t player_list .
+docker run -p 8000:8000 player_list
+
+Open in browser:
+http://localhost:8000
+
+💻 Running Without Docker (Optional)
+Open terminal in the project folder
+Create and activate virtual environment:
+py -3 -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+Open in browser:
+http://127.0.0.1:8000/
