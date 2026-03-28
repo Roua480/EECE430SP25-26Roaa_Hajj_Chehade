@@ -80,7 +80,7 @@ Open in browser:
 
 ---
 
-# 💻 Running Without Docker (Optional)
+# 💻 Running Without Docker 
 
 Open terminal in the project folder
 
