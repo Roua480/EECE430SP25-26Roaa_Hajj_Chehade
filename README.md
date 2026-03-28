@@ -34,11 +34,11 @@ The application has been containerized using Docker to allow easy deployment and
 ---
 
 ## 🛠 Technologies Used
-- Python
-- Django
-- SQLite
-- HTML (templates)
-- Docker
+- Python  
+- Django  
+- SQLite  
+- HTML (templates)  
+- Docker  
 
 ---
 
@@ -61,25 +61,61 @@ Pull and run the pre-built image:
 ```bash
 docker pull roua780/player_list:latest
 docker run -p 8000:8000 roua780/player_list:latest
-Open in browser:
-http://localhost:8000
+```
 
-🔹 Option 2: Build and Run Locally
+Open in browser:  
+👉 http://localhost:8000
+
+---
+
+## 🔹 Option 2: Build and Run Locally
+
+```bash
 docker build -t player_list .
 docker run -p 8000:8000 player_list
+```
 
-Open in browser:
-http://localhost:8000
+Open in browser:  
+👉 http://localhost:8000
 
-💻 Running Without Docker (Optional)
+---
+
+# 💻 Running Without Docker (Optional)
+
 Open terminal in the project folder
-Create and activate virtual environment:
+
+## 🔹 1. Create and activate virtual environment
+
+```bash
 py -3 -m venv venv
 venv\Scripts\activate
+```
+
+## 🔹 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+## 🔹 3. Apply migrations
+
+```bash
 python manage.py makemigrations
 python manage.py migrate
-python manage.py runserver
+```
 
-Open in browser:
-http://127.0.0.1:8000/
+## 🔹 4. Run the server
+
+```bash
+python manage.py runserver
+```
+
+Open in browser:  
+👉 http://127.0.0.1:8000/
+
+---
+
+## 📌 Notes
+- Make sure Docker is installed and running before using Docker commands
+- Port `8000` must be available on your machine
+- Python 3 is required if running without Docker
