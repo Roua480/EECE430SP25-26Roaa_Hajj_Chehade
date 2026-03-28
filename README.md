@@ -53,7 +53,7 @@ The application has been containerized using Docker to allow easy deployment and
 ---
 
 # 🐳 Running the Project (Docker)
-
+(note: Docker must be installed and running)
 ## 🔹 Option 1: Run from Docker Hub
 
 Pull and run the pre-built image:
